@@ -28,8 +28,9 @@
             "spooky-img.jpg", 
             "loading-img.png",
             "bear-img.png", 
-            "spookyAudio.mp3", 
-            "alarmAudio.mp3", 
+            "spooky-audio.mp3", 
+            "alarm-audio.mp3", 
+            "bear-audio.mp3",
             "styles.css"
           ],
           "matches": [

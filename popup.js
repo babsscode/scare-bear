@@ -12,9 +12,9 @@ chrome.storage.local.get('active', (data) => {
 
 // mode
 chrome.storage.local.get('mode', (data) => {
-  const initialStatus = data.mode !== undefined ? data.mode : 'Spooky Scream';
+  const initialStatus = data.mode !== undefined ? data.mode : 'spooky';
 
-  scareMenu.value = data.mode;
+  scareMenu.value = initialStatus;
 });
 
 // when toggle button clicked toggle spooky mode on or off

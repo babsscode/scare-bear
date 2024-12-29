@@ -2,21 +2,18 @@ let active = false;
 let mode = "";
 // replaces all images with a halloween theme image
 function replaceImages(scareMode) {
-    console.log(mode)
-
-    let imageName = "";
-    
-    if (mode == "loading") {
+    let imageName = "spooky-img.jpg";
+    if (scareMode == "loading") {
         imageName = "loading-img.png";
     }
-    else if (mode == "spooky") {
+    else if (scareMode == "spooky") {
         imageName = "spooky-img.jpg";
     }
-    else if (mode == "bear") {
+    else if (scareMode == "bear") {
         imageName = "bear-img.png";
     }
     else {
-        imageName = "loading-img.png";
+        imageName = "spooky-img.jpg";
     }
     console.log(imageName)
     const replacementImage = chrome.runtime.getURL(imageName);
@@ -25,8 +22,22 @@ function replaceImages(scareMode) {
 }
 
 // plays halloween piano music
-function playAudio() {
-    const audio = new Audio(chrome.runtime.getURL('spookyAudio.mp3'));
+function playAudio(scareMode) {
+    let audioName = "spooky-audio.mp3";
+    
+    if (scareMode == "loading") {
+        audioName = "alarm-audio.mp3";
+    }
+    else if (scareMode == "spooky") {
+        audioName = "spooky-audio.mp3";
+    }
+    else if (scareMode == "bear") {
+        audioName = "bear-audio.mp3";
+    }
+    else {
+        audioName = "spooky-audio.mp3";
+    }
+    const audio = new Audio(chrome.runtime.getURL(audioName));
     audio.currentTime = 0;
     audio.play().catch(err => {
       console.error('Audio play failed:', err);
@@ -55,7 +66,12 @@ chrome.storage.local.get('active', (result) => {
 // mode
 chrome.storage.local.get('mode', (result) => {
     if (result.mode !== undefined) {
-        updateModeState(result.mode);
+        if (result.mode == "") {
+            updateModeState("Spooky Scream");
+        }
+        else {
+            updateModeState(result.mode);
+        }
     }
     else {
         updateModeState("Spooky Scream");
@@ -68,7 +84,7 @@ document.addEventListener('click', () => {
     // if spooky mode activated
     if (active) {
         replaceImages(mode);
-        playAudio();
+        playAudio(mode);
     }
 });
 
