@@ -24,7 +24,14 @@
     ],
     "web_accessible_resources": [
         {
-          "resources": ["spooky-img.jpg", "loading.png", "spookyAudio.mp3", "alarmAudio.mp3", "styles.css"],
+          "resources": [
+            "spooky-img.jpg", 
+            "loading-img.png",
+            "bear-img.png", 
+            "spookyAudio.mp3", 
+            "alarmAudio.mp3", 
+            "styles.css"
+          ],
           "matches": [
             "https://www.youtube.com/*",
             "https://www.google.com/*",
