@@ -7,10 +7,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> 
-    <title>Spooky Mode</title>
+    <title>Scare Bear</title>
 </head>
 <body>
-  <h1 style="margin-bottom: 20px; margin-top: 10px;" >  Spooky Mode  </h1>
+  <h1 style="margin-bottom: 10px; margin-top: 5px;" >  Scare Bear  </h1>
+  <h2 style="margin-top: 5px;" > Select Mode: </h1>
+  <select id="scareMenu" class="select" name="modes">
+    <option value="spooky">Spooky Scream</option>
+    <option value="loading">Loading Glitch</option>
+    <option value="bear">Bear Overload</option>
+  </select>
   <button id="toggleButton" type="submit" class="button">Disable</button>
   <script src="popup.js"></script>
 </body>

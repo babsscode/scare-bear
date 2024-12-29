@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Spooky Mode",
-    "version": "1.1",
+    "name": "Scare Bear",
+    "version": "2.0",
     "description": "A Spooky Halloween Prank!",
     "permissions": ["storage"],
     "action": {
@@ -24,7 +24,7 @@
     ],
     "web_accessible_resources": [
         {
-          "resources": ["spooky-img.jpg", "audio.mp3", "styles.css"],
+          "resources": ["spooky-img.jpg", "loading.png", "spookyAudio.mp3", "alarmAudio.mp3", "styles.css"],
           "matches": [
             "https://www.youtube.com/*",
             "https://www.google.com/*",

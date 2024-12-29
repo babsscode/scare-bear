@@ -7,7 +7,7 @@ function replaceImages() {
 
 // plays halloween piano music
 function playAudio() {
-    const audio = new Audio(chrome.runtime.getURL('audio.mp3'));
+    const audio = new Audio(chrome.runtime.getURL('spookyAudio.mp3'));
     audio.currentTime = 0;
     audio.play().catch(err => {
       console.error('Audio play failed:', err);
