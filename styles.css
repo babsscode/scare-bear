@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
-    font-family: 'Protest Strike', sans-serif;
+    font-family: 'Poppins', serif;
     margin: 0;
     padding: 20px;
-    background-color: #ff8f57;
+    background-color: #FFE66D;
     border-radius: 15px;
     width: 250px;
     height: 200px;
@@ -25,7 +25,7 @@ h2 {
 
 .button {
     background-color: #242424;
-    color: rgb(255, 238, 215);
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
@@ -35,19 +35,9 @@ h2 {
     margin-top: 10px;
 }
 
-.button[data-color="orange"] {
-    background-color: #ff8f57;
-    color: #242424;
-}
-
-.button[data-color="yellow"] {
-    background-color: #ffcc00;
-    color: #242424;
-}
-
 .select {
     background-color: #242424;
-    color: rgb(255, 238, 215);
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 8px;
     padding: 10px 25px;
@@ -62,23 +52,13 @@ h2 {
     margin-right: auto;
 }
 
-.select[data-color="orange"] {
-    background-color: #ff8f57;
-    color: #242424;
-}
-
-.select[data-color="yellow"] {
-    background-color: #ffcc00;
-    color: #242424;
-}
-
 .select::-ms-expand {
     display: none;
 }
 
 .select option {
     background-color: #242424;
-    color: rgb(255, 238, 215);
+    color: rgb(255, 255, 255);
 }
 
 .select:hover {
