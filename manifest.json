@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Scare Bear",
     "version": "2.0",
-    "description": "A Spooky Halloween Prank!",
+    "description": "Wholesome jumpscare prank to add some excitement to your browsing experience.",
     "permissions": ["storage"],
     "action": {
       "default_popup": "popup.html",
