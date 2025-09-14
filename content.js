@@ -12,6 +12,9 @@ function replaceImages(scareMode) {
     else if (scareMode == "bear") {
         imageName = "bear-img.png";
     }
+    else if (scareMode == "error") {
+        imageName = "error-img.png";
+    }
     else {
         imageName = "spooky-img.jpg";
     }
@@ -25,7 +28,7 @@ function replaceImages(scareMode) {
 function playAudio(scareMode) {
     let audioName = "spooky-audio.mp3";
     
-    if (scareMode == "loading") {
+    if (scareMode == "error") {
         audioName = "alarm-audio.mp3";
     }
     else if (scareMode == "spooky") {
@@ -34,14 +37,20 @@ function playAudio(scareMode) {
     else if (scareMode == "bear") {
         audioName = "bear-audio.mp3";
     }
+    else if (scareMode == "loading") {
+        audioName = "none";
+    }
     else {
         audioName = "spooky-audio.mp3";
     }
-    const audio = new Audio(chrome.runtime.getURL(audioName));
-    audio.currentTime = 0;
-    audio.play().catch(err => {
-      console.error('Audio play failed:', err);
-    });
+
+    if (audioName != "none") {
+        const audio = new Audio(chrome.runtime.getURL(audioName));
+        audio.currentTime = 0;
+        audio.play().catch(err => {
+        console.error('Audio play failed:', err);
+        });
+    }
 }
 
 // update the active state (for example when the toggle button is pressed)
