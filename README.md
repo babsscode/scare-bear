@@ -1,4 +1,4 @@
-#Scare Bear
+# Scare Bear
 
 Prank your friends to add some excitement to their browsing experience.
 
